@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Podium</title>
+	<link rel="shortcut icon" href="dist/img/fav57.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="dist/css/style.main.min.css">
+
+</head>
+<body>
+	<header class="header">
+		<div class="container clearfix">
+			<img src="dist/img/logo.png" alt="logo" class="header__logo">
+			<div class="header__title">
+				<p>Оптовая продажа женских сумок, клатчей, рюкзаков в Украине</p>
+			</div>
+			<a href="#" class="header__language active">ru</a>
+			<a href="#" class="header__language">ua</a>
+			<div class="header__phone ">
+				<a href="tel:+380993843007">099 384-30-07</a>
+				<a href="tel:+380993843007" class="header__mobile">
+					<img src="dist/img/phone.svg" alt="">
+				</a>
+				<button onclick="PopUpShow(getAdvice)">Давайте мы перезвоним</button>
+			</div>
+		</div>
+	</header>
+	<section class="banner">
+		<div class="container clearfix">
+			<div class="wrapper__banner">
+				<h1>Оптовая продажа женских сумок, клатчей и рюкзаков</h1>
+				<h2>из экокожи напрямую из Европы по цене производителя</h2>
+				<ul>
+					<li class="banner__item"><span>Более 10 популярных брендов</span></li>
+					<li class="banner__item"><span>Возможность мелкого опта от 5 единиц</span></li>
+					<li class="banner__item"><span>Бесплатная доставка по всей Украине</span></li>
+					<li class="banner__item"><span>Непроданный товар пробной партии заберем обратно</span></li>
+				</ul>
+				<button class="banner__button" onclick="PopUpShow(getTrial)">Заказать пробную партию</button>
+			</div>
+		</div>
+	</section>
+	<section class="present">
+		<div class="container">
+			<div class="present__brand">
+				<h3>Представляем только популярные европейские бренды</h3>
+				<div class="present__brand-item"><img src="dist/img/prada.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/chanel.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/kors.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/vuitton.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/veneta.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/gabbana.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/gucci.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/valentino.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/dior.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/salvatore.jpg" alt=""></div>
+				<div class="present__brand-item"><img src="dist/img/furla.jpg" alt=""></div>
+			</div>
+			<div class="present__earn">
+				<h3>Зарабатывайте больше,<br>сотрудничая с нами на самых выгодных условиях</h3>
+				<div class="present__earn-item clearfix">
+					<div class="earn__img-wrapper earn__item-left">
+						<img src="dist/img/earn-1.jpg" alt="">
+					</div>
+					<div class="earn__item-content earn__item-right clearfix">
+						<h4>Пробная партия</h4>
+						<p>Наша продукция пользуется спросом не только благодаря доступным ценам, но и высокому качеству. Убедитесь в этом, заказав пробную партию мелким оптом — от 5 единиц. Оплатить ее Вы можете любым удобным для Вас способом, включая наложенный платеж. Если вдруг в течение месяца Вы не продадите пробную партию, мы заберем ее обратно. </p>
+						<button class="banner__button" onclick="PopUpShow(getTrial)">Заказать пробную партию</button>
+					</div>
+				</div>
+
+				<div class="present__earn-item clearfix">
+					<div class="earn__img-wrapper earn__item-right">
+						<img src="dist/img/earn-2.jpg" alt="">
+					</div>
+					<div class="earn__item-content earn__item-left clearfix">
+						<h4>2 раза в месяц оповещаем о новых<br> поступлениях на склад </h4>
+						<p>Наша продукция пользуется спросом не только благодаря доступным ценам, но и высокому качеству. Убедитесь в этом, заказав пробную партию мелким оптом — от 5 единиц. Оплатить ее Вы можете любым удобным для Вас способом, включая наложенный платеж. Если вдруг в течение месяца Вы не продадите пробную партию, мы заберем ее обратно. </p>
+					</div>
+				</div>
+
+				<div class="present__earn-item clearfix earn__item-sale">
+					<div class="earn__img-wrapper earn__item-left">
+						<img src="dist/img/earn-3.jpg" alt="">
+					</div>
+					<div class="earn__item-content earn__item-right clearfix">
+						<h4>Система лояльности<br> и регулярные скидки</h4>
+						<p>У нас действует гибкая система лояльности и скидки для постоянных клиентов. Также мы всегда предоставляем скидку на сезонный предзаказ.</p>
+						<button class="banner__button" onclick="PopUpShow(getSale)">Получить скидку на предзаказ</button>
+					</div>
+				</div>
+
+				<div class="present__earn-item clearfix earn__item-guarantee">
+					<div class="earn__img-wrapper earn__item-right">
+						<img src="dist/img/earn-4.jpg" alt="">
+					</div>
+					<div class="earn__item-content earn__item-left clearfix">
+						<h4>Гарантия качества</h4>
+						<p>В нашем ассортименте сумки из экокожи наивысшего качества, с идеальными швами и  надежной фурнитурой. </p>
+					</div>
+				</div>
+
+				<div class="present__earn-item clearfix earn__item-individual">
+					<div class="earn__img-wrapper earn__item-left">
+						<img src="dist/img/earn-5.jpg" alt="">
+					</div>
+					<div class="earn__item-content earn__item-right clearfix">
+						<h4>Индивидуальный каталог</h4>
+						<p>Часто бывает, что клиенту трудно сделать правильный выбор из широкого и разнообразного ассортимента. Поэтому мы сформируем каталог индивидуально для Вашего магазина, учитывая все озвученные потребности.</p>
+						<button class="banner__button" onclick="PopUpShow(getCatalog)">Получить каталог</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="certificate">
+		<div class="container clearfix">
+			<div class="certificate__content">
+				<h3>Получите сертификат на <span>5000 грн!</span></h3>
+				<p>Оставьте заявку на формирование индивидуального каталога и получите сертификат на <span>5000 грн</span> в подарок!</p>
+				<p class="certificate__timer">До конца акции осталось:</p>
+				<ul>
+					<li>01<span>день</span></li>
+					<li>23<span>час</span></li>
+					<li>16<span>минут</span></li>
+					<li>13<span>сек</span></li>
+				</ul>
+			</div>
+			<div class="certificate__form">
+				<h4>Заполните форму</h4>
+				<p>чтобы получить индивидуальный каталог и сертификат на <span>5000 грн</span></p>
+				<form method="post" class="form" id="certFormWrapper" action="">
+					<input type="hidden" name="project_name" value="Podium" re>
+					<input type="hidden" name="form_subject" value="Заявка с лэндинга">
+					<input type="hidden" name="whatform" value="Форма - Получить сертификат">
+					<input type="text" name="name" placeholder="Ваше имя" required="">
+					<input type="email" name="email" placeholder="Ваш e-mail" required="">
+					<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required="">
+					<button onclick="formValidate(certFormWrapper)">Получить сeртификат</button>
+				</form>
+			</div>
+			<div class="certificate__form-mobile">
+				<button onclick="PopUpShow(getCertificate)">Получить сeртификат</button>
+			</div>
+		</div>
+	</section>
+
+	<div class="popup" id="getTrial">
+		<div class="form_wrapper" id="">
+			<h6>Заполните форму</h6>
+			<p>и наш менеджер свяжется с Вами в течение 15 минут, чтобы оформить заказ на пробную партию</p>
+			<form method="post" class="form" id="getTrialForm" action="">
+				<input type="hidden" name="project_name" value="Podium">
+				<input type="hidden" name="form_subject" value="Заявка с лэндинга">
+				<input type="hidden" name="whatform" value="Форма - Заказать пробную партию">
+				<input type="text" name="name" placeholder="Ваше имя" required="">
+				<input type="email" name="email" placeholder="Ваш e-mail" required="">
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required="">
+				<button onclick="formValidate(getTrialForm, getTrial)">Заказать пробную партию</button>
+			</form>
+			<div onclick="PopUpHide(getTrial)" class="form__close"></div>
+		</div>
+	</div>
+
+	<div class="popup" id="getSale">
+		<div class="form_wrapper" id="">
+			<h6>Заполните форму</h6>
+			<p>и наш менеджер свяжется с Вами в течение 15 минут, чтобы помочь оформить предзаказ и получить скидку заказ на пробную партию</p>
+			<form method="post" class="form" id="getSaleForm" action="">
+				<input type="hidden" name="project_name" value="Podium">
+				<input type="hidden" name="form_subject" value="Заявка с лэндинга">
+				<input type="hidden" name="whatform" value="Форма - Получить скидку">
+				<input type="text" name="name" placeholder="Ваше имя" required="">
+				<input type="email" name="email" placeholder="Ваш e-mail" required="">
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required="">
+				<button onclick="formValidate(getSaleForm, getSale)">Получить скидку</button>
+			</form>
+			<div onclick="PopUpHide(getSale)" class="form__close"></div>
+		</div>
+	</div>
+
+	<div class="popup" id="getCatalog">
+		<div class="form_wrapper" id="getCatalogForm">
+			<h6>Заполните форму</h6>
+			<p>и наш менеджер свяжется с Вами в течение 15 минут, чтобы уточнить все детали для формирования каталога</p>
+			<form method="post" class="form" id="" action="">
+				<input type="hidden" name="project_name" value="Podium">
+				<input type="hidden" name="form_subject" value="Заявка с лэндинга">
+				<input type="hidden" name="whatform" value="Форма - Получить каталог">
+				<input type="text" name="name" placeholder="Ваше имя" required="">
+				<input type="email" name="email" placeholder="Ваш e-mail" required="">
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required="">
+				<button onclick="formValidate(getCatalogForm, getCatalog)">Получить каталог</button>
+			</form>
+			<div onclick="PopUpHide(getCatalog)" class="form__close"></div>
+		</div>
+	</div>
+
+	<div class="popup" id="getAdvice">
+		<div class="form_wrapper" id="">
+			<h6>Заполните форму</h6>
+			<p>и наш менеджер свяжется с Вами в течение 15 минут</p>
+			<form method="post" class="form" id="getAdviceForm" action="">
+				<input type="hidden" name="project_name" value="Podium">
+				<input type="hidden" name="form_subject" value="Заявка с лэндинга">
+				<input type="hidden" name="whatform" value="Форма - Получить консультацию">
+				<input type="text" name="name" placeholder="Ваше имя" required="">
+				<input type="email" name="email" placeholder="Ваш e-mail" required="">
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required="">
+				<button onclick="formValidate(getAdviceForm, getAdvice)">Получить консультацию</button>
+			</form>
+			<div onclick="PopUpHide(getAdvice)" class="form__close"></div>
+		</div>
+	</div>
+	<div class="popup" id="getCertificate">
+		<div class="form_wrapper" id="">
+			<h6>Заполните форму</h6>
+			<p>и наш менеджер свяжется с Вами в течение 15 минут</p>
+			<form method="post" class="form" id="getCertificateForm" action="">
+				<input type="hidden" name="project_name" value="Podium">
+				<input type="hidden" name="form_subject" value="Заявка с лэндинга">
+				<input type="hidden" name="whatform" value="Форма - Получить консультацию">
+				<input type="text" name="name" placeholder="Ваше имя" required="">
+				<input type="email" name="email" placeholder="Ваш e-mail" required="">
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required="">
+				<button onclick="formValidate(getCertificateForm, getCertificates)">Получить сертификат</button>
+			</form>
+			<div onclick="PopUpHide(getCertificate)" class="form__close"></div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="dist/script/jquery.validate.min.js"></script>
+
+	<script src="dist/script/jquery.maskedinput.min.js"></script>
+	<script src="dist/script/script.main.min.js"></script>
+</body>
+</html>
