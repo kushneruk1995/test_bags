@@ -11,12 +11,29 @@ function PopUpHide(id){
 		$('.phone').mask('+38(099) 999-9999');
 	});
 
-// Wait for the DOM to be ready
-$(function() {
-  // Initialize form validation on the registration form.
-  // It has the name attribute "registration"
 
-});
+$('.products__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '.bags__next',
+    speed: 100,
+    swipe: false,
+    prevArrow: '.bags__prev',
+    responsive: [
+      {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+      },
+      {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+      }
+    ]
+  });
 
 
 
@@ -54,12 +71,23 @@ function formValidate(form ,id) {
   });
 }
 
-// function checkSize(form, id) {
-// 	var id;
-// 	var form;
-// 	if ($(window).width() <= '767') {
-// 		PopUpShow(id);
-// 	} else {
-// 		formValidate(form ,id);
-// 	}
-// }
+$(document).ready(function() {
+  $('.products .slick-current').next().addClass('slick-center');
+  $('.product__next, .product__prev').click(function(){
+    $('.products .slick-current').next().addClass('slick-center');
+  });
+})
+
+function showProducts(el) {
+      var data = $(el).data('color');
+      var parents = $(el).parent().parent().find('.product__circle img');
+      $(parents).css('display', 'none');
+      $.each( parents, function(i) {
+        var dataImg = $(parents[i]).data('color');
+        if (dataImg == data) {
+          $(parents[i]).css('display', 'block');
+        } else {
+          $(parents[i]).css('display', 'none');
+        }
+      });
+}

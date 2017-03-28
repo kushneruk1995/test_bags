@@ -7,6 +7,8 @@
 	<link rel="shortcut icon" href="dist/img/fav57.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="dist/css/slick.css" />
+	<link rel="stylesheet" href="dist/css/slick-theme.css" />
 	<link rel="stylesheet" href="dist/css/style.main.min.css">
 
 </head>
@@ -123,12 +125,16 @@
 				<h3>Получите сертификат на <span>5000 грн!</span></h3>
 				<p>Оставьте заявку на формирование индивидуального каталога и получите сертификат на <span>5000 грн</span> в подарок!</p>
 				<p class="certificate__timer">До конца акции осталось:</p>
-				<ul>
+				<!-- <ul>
 					<li>01<span>день</span></li>
 					<li>23<span>час</span></li>
 					<li>16<span>минут</span></li>
 					<li>13<span>сек</span></li>
-				</ul>
+				</ul> -->
+				<div class="banner__timer">
+					<script src="http://megatimer.ru/s/3aba0cc7445fc6da7b598cb396f16b92.js"></script>
+				</div>
+				
 			</div>
 			<div class="certificate__form">
 				<h4>Заполните форму</h4>
@@ -146,6 +152,86 @@
 			<div class="certificate__form-mobile">
 				<button onclick="PopUpShow(getCertificate)">Получить сeртификат</button>
 			</div>
+		</div>
+	</section>
+
+	<section class="products">
+		<div class="container">
+			<h3>Самые продаваемые позиции</h3>
+			<h4>Женские сумки</h4>
+			<h5>*Цена зависит от модели, бренда и объема закупки.</h5>
+			<div class="slider__wrapper clearfix">
+					<div class="prev product__prev bags__prev"></div>
+					<div class="next product__next bags__next"></div>
+					<div class="col-xs-12">
+						<div class="products__slider product__slider">
+							<div class="product__item">
+								<div class="product__circle">
+									<img src="dist/img/bag_1-bordo.png" alt="" data-color="bordo">
+									<img src="dist/img/bag_1-red.png" alt="" style="display: none;" data-color="red">
+									<img src="dist/img/bag-1-black.png" alt="" style="display: none;" data-color="black">
+								</div>
+								<div class="colors">
+									<div style="background: #442e33;" data-color="bordo" onclick="showProducts(this)"></div>
+									<div style="background: #841327;" data-color="red" onclick="showProducts(this)"></div>
+									<div style="background: #000;" data-color="black" onclick="showProducts(this)"></div>
+								</div>
+							</div>
+							<div class="product__item">
+								<div class="product__circle">
+									<img src="dist/img/bag_2-white.png" alt="" data-color="white">
+									<img src="dist/img/bag_2-brown.png" alt="" style="display: none;" data-color="brown">
+									<img src="dist/img/bag_2-black.png" alt="" style="display: none;" data-color="black">
+								</div>
+								<div class="colors">
+									<div style="background: #ede6e2;" data-color="white" onclick="showProducts(this)"></div>
+									<div style="background: #754d2f;" data-color="brown" onclick="showProducts(this)"></div>
+									<div style="background: #000000;" data-color="black" onclick="showProducts(this)"></div>
+								</div>
+							</div>
+							<div class="product__item">
+								<div class="product__circle">
+									<img src="dist/img/bag_3-white.png" alt="" data-color="white">
+									<img src="dist/img/bag_3-pink.png" alt="" data-color="pink" style="display: none;">
+									<img src="dist/img/bag_3-grey.png" alt="" data-color="grey" style="display: none;">
+									<img src="dist/img/bag_3-black.png" alt="" data-color="black" style="display: none;">
+								</div>
+								<div class="colors">
+									<div style="background: #f4efe9;" data-color="white" onclick="showProducts(this)"></div>
+									<div style="background: #b5888d;" data-color="pink" onclick="showProducts(this)"></div>
+									<div style="background: #7e777d;" data-color="grey" onclick="showProducts(this)"></div>
+									<div style="background: #000000;" data-color="black" onclick="showProducts(this)"></div>
+								</div>
+							</div>
+							<div class="product__item">
+								<div class="product__circle">
+									<img src="dist/img/bag_1-bordo.png" alt="" data-color="bordo">
+									<img src="dist/img/bag_1-red.png" alt="" style="display: none;" data-color="red">
+									<img src="dist/img/bag-1-black.png" alt="" style="display: none;" data-color="black">
+								</div>
+								<div class="colors">
+									<div style="background: #442e33;" data-color="bordo" onclick="showProducts(this)"></div>
+									<div style="background: #841327;" data-color="red" onclick="showProducts(this)"></div>
+									<div style="background: #000;" data-color="black" onclick="showProducts(this)"></div>
+								</div>
+							</div>
+							<div class="product__item">
+								<div class="product__circle">
+									<img src="dist/img/bag_2-white.png" alt="" data-color="white">
+									<img src="dist/img/bag_2-brown.png" alt="" style="display: none;" data-color="brown">
+									<img src="dist/img/bag_2-black.png" alt="" style="display: none;" data-color="black">
+								</div>
+								<div class="colors">
+									<div style="background: #ede6e2;" data-color="white" onclick="showProducts(this)"></div>
+									<div style="background: #754d2f;" data-color="brown" onclick="showProducts(this)"></div>
+									<div style="background: #000000;" data-color="black" onclick="showProducts(this)"></div>
+								</div>
+							</div>
+						</div>
+						<p>...и еще более 74 моделей</p>
+						<button onclick="PopUpShow(getCatalog)">Получить каталог</button>
+					</div>
+				</div>
 		</div>
 	</section>
 
@@ -235,7 +321,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="dist/script/jquery.validate.min.js"></script>
-
+	<script src="dist/script/slick.min.js"></script>
 	<script src="dist/script/jquery.maskedinput.min.js"></script>
 	<script src="dist/script/script.main.min.js"></script>
 </body>
