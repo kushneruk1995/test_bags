@@ -12,7 +12,23 @@ function PopUpHide(id){
 	});
 
 
-$('.products__slider').slick({
+
+// function slick() {
+  
+// }
+
+// $(window).resize(function() {
+//   $('.products__slider').unslick();
+// });
+
+// $(window).on('orientationchange', function() {
+//   $('.products__slider').slick('resize');
+// });
+
+
+function slick() {
+  $('.products__slider').slick({
+    centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: '.bags__next',
@@ -21,62 +37,49 @@ $('.products__slider').slick({
     prevArrow: '.bags__prev',
     responsive: [
       {
-      breakpoint: 992,
+      breakpoint: 1025,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 2,
+        centerMode: false,
       }
       },
       {
       breakpoint: 768,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
+        centerMode: false,
       }
       }
     ]
   });
-
-
+  $('.products .slick-active.slick-center').prev().css('left', '14px');
+  $('.products .slick-active.slick-center').next().css('right', '32px');
+}
 
 function formValidate(form ,id) {
 	var id;
 	var form;
 
 	 $(form).validate({
-    // Specify validation rules
     rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
       name: "required",
       email: {
         required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
         email: true
       },
       phone: "required"
     },
-    // Specify validation error messages
     messages: {
       name: "Please enter your name",
       email: "Please enter a valid email address",
       phone: "Please enter a phone"
     },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
     submitHandler: function(form, id) {
       form.submit();
       PopUpHide(id);
     }
   });
 }
-
-$(document).ready(function() {
-  $('.products .slick-current').next().addClass('slick-center');
-  $('.product__next, .product__prev').click(function(){
-    $('.products .slick-current').next().addClass('slick-center');
-  });
-})
 
 function showProducts(el) {
       var data = $(el).data('color');
@@ -91,3 +94,29 @@ function showProducts(el) {
         }
       });
 }
+
+
+function changeHeight() {
+  $('.earn__item-content').css('min-height', 'auto');
+  var widthWindow = $(window).width();
+  if (widthWindow > 767) {
+    var img =$('.earn__img-wrapper');
+    $.each( img, function(i) {
+        var imgHeight = $(img[i]).height();
+        var block = $(img[i]).parent().find('.earn__item-content');
+        $(block).css('min-height', imgHeight);
+    });
+  }
+  
+}
+
+$(window).resize(function() {
+  changeHeight();
+    $(".products__slider").slick('destroy');
+    $(".products__slider").slick('init');
+    $('.products .slick-active.slick-center').prev().css('left', '14px');
+    $('.products .slick-active.slick-center').next().css('right', '32px');
+});
+
+changeHeight();
+slick();
